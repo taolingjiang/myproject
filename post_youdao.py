@@ -1,10 +1,18 @@
+from random import randint
+
 import requests
 
 url="http://fanyi.youdao.com/translate_o?smartresult=dict&smartresult=rule"
 
 
 def get_salt():
-    return '15867595017047'
+    s=str(randint(0, 10))
+    t=get_ts()
+    # print("random = ", s)
+    # print("ts =", t)
+    # print("salt =",t+s)
+    return t+s
+    # return '15867595017047'
 
 
 def get_sign():
