@@ -1,15 +1,33 @@
 import requests
 
 url="http://fanyi.youdao.com/translate_o?smartresult=dict&smartresult=rule"
+
+
+def get_salt():
+    return '15867595017047'
+
+
+def get_sign():
+    return 'c40d36905b5e23c8ca0f21ddc885c6da'
+
+
+def get_ts():
+    import time
+    t = time.time()
+    ts = str(int(round(t * 1000)))
+    return ts
+    #'1586759501704'
+
+
 form_date={
     'i': '我和你都是中国',
     'from': 'AUTO',
     'to': 'AUTO',
     'smartresult': 'dict',
     'client': 'fanyideskweb',
-    'salt': '15867595017047',
-    'sign': 'c40d36905b5e23c8ca0f21ddc885c6da',
-    'ts': '1586759501704',
+    'salt': get_salt(),
+    'sign': get_sign(),
+    'ts': get_ts(),
     'bv': 'b016bfc8dd420bcfc5d5a95c5a1600f4',
     'doctype': 'json',
     'version': '2.1',
