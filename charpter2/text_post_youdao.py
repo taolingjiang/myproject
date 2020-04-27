@@ -1,5 +1,4 @@
 import unittest
-from post_youdao import *
 from unittest import mock
 
 class PostYoudaoText(unittest.TestCase):

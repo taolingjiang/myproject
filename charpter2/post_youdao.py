@@ -76,7 +76,10 @@ if __name__ ==  '__main__' :
     # print(form_date)
     # print(get_headers())
     while(True):
-        i=input('please input :')
-        youdao=Youdao(i)
-        print('fanyi result :',youdao.fanyi())
+        try:
+            i=input('please input :')
+            youdao=Youdao(i)
+            print('fanyi result :',youdao.fanyi())
+        except:
+            pass
     # print(response.text)
